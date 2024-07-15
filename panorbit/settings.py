@@ -36,11 +36,14 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'haystack',
-    'world',
-    'phonenumber_field',
+    'django.contrib.staticfiles', 
 ]
+
+EXTERNAL_APPS = [ 'haystack',
+    'world',
+    'phonenumber_field']
+
+INSTALLED_APPS = EXTERNAL_APPS + INSTALLED_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
